@@ -6,5 +6,10 @@ package com.wojtowicz;
  * @date 26.01.20
  */
 
-public class CompareFileMagicNumbers {
+public class CompareFileMagicNumbers extends ReadHexFromFile {
+
+
+
+
+
 }
