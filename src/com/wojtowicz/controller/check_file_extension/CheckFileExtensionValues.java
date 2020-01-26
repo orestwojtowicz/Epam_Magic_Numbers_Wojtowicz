@@ -12,7 +12,12 @@ import java.io.FileNotFoundException;
 
 public interface CheckFileExtensionValues {
 
-
+    /**
+     * @param hexValue
+     * @param defaultHexString
+     * @throws IncorrectFormatException
+     * @throws FileNotFoundException    This default method takes two params, and will compare this values in CompareFileMagicNumbers.class
+     */
     default void checkIfGivenFileExtensionIsCorrect(
             String hexValue, String defaultHexString) throws IncorrectFormatException, FileNotFoundException {
     }

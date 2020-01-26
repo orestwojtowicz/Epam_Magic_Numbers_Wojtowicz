@@ -20,7 +20,14 @@ import java.util.Map;
 
 public class CompareFileMagicNumbers extends ReadHexFromFile implements CheckFileExtensionValues {
 
-
+    /**
+     * Comparing two Strings from file and returning user friendly message
+     *
+     * @param hexValue         represents requested file hex values
+     * @param defaultHexString hex values are read from enum
+     * @throws IncorrectFormatException
+     * @throws FileNotFoundException
+     */
 
     @Override
     public void checkIfGivenFileExtensionIsCorrect(
@@ -39,17 +46,29 @@ public class CompareFileMagicNumbers extends ReadHexFromFile implements CheckFil
         }
     }
 
-
+    /**
+     * Helper method to make nice final message to user with file extensions
+     * Removing [] from string, and comparing this value, based on method in enum class getEnumByName
+     *
+     * @param filePath for example it [89, 50, 4e, 47]
+     * @return returning for example 89, 50, 4e, 47
+     */
     private String convertRequestedFileToFileExtension(String filePath) throws FileNotFoundException {
 
-        String hexValueFromFile = readHexValuesFromFile(filePath); //example output [89, 50, 4e, 47]
-        String removedString = hexValueFromFile.substring(1, hexValueFromFile.length()-1); //example output 89, 50, 4e, 47
+        String hexValueFromFile = readHexValuesFromFile(filePath); //
+        String removedString = hexValueFromFile.substring(1, hexValueFromFile.length() - 1);
         String getEnumName = HexValues.getEnumByName(removedString.toUpperCase());
 
         return getEnumName;
     }
 
-
+    /**
+     * Helper method for converting hex value to file extension.
+     * When exception is thrown, method will be triggered
+     *
+     * @param hexValue takes hex value from file, this value is later for comparision
+     * @return only file extension, read from enum
+     */
     private String convertHexValueToFileExtension(String hexValue) {
 
         String returnFileExtension = "";
@@ -62,7 +81,14 @@ public class CompareFileMagicNumbers extends ReadHexFromFile implements CheckFil
         return HexValues.getEnumByName(returnFileExtension);
     }
 
-
+    /**
+     * method for reading hex values from file
+     * assign first 4 values to String variable
+     *
+     * @param filePath
+     * @return String hexValue
+     * @throws FileNotFoundException
+     */
     private String readHexValuesFromFile(String filePath) throws FileNotFoundException {
 
         File file = new File(filePath);
@@ -81,7 +107,12 @@ public class CompareFileMagicNumbers extends ReadHexFromFile implements CheckFil
         return hexValue.toLowerCase();
     }
 
-
+    /**
+     * method for reading default hex values from enum and put them into HashMap
+     *
+     * @param defaultHexValueFromEnum
+     * @return defaultHexString
+     */
     private String readDefaultHexValuesFromEnum(String defaultHexValueFromEnum) {
 
         Map<String, List<String>> defaultHexValues = new HashMap<>();

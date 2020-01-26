@@ -15,6 +15,16 @@ import java.util.List;
 
 public abstract class ReadHexFromFile {
 
+
+    /**
+     * The method is used for reading file bytes, and returning it as a List of Strings
+     * There will be only 4 values read from file, because in this scenario is enough
+     *
+     * @param file requested file to read hex values
+     * @return List<String> with given hex values from file
+     */
+
+
     public List<String> readHexValues(File file) {
 
         List<String> dataList = null;
@@ -34,6 +44,4 @@ public abstract class ReadHexFromFile {
         }
         return dataList;
     }
-
-
 }

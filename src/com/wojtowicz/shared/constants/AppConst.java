@@ -9,6 +9,10 @@ package com.wojtowicz.shared.constants;
 public class AppConst {
 
 
+    /**
+     * App constants for holding paths to all files, which can be checked for extensions
+     * */
+
     public static final String ANGULAR_PNG = "resources/angular.png";
     public static final String NOT_GIF = "resources/notgif.gif";
     public static final String QUESTIONS_PDF = "resources/questions.pdf";

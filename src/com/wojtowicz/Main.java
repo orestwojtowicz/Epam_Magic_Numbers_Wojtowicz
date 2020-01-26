@@ -15,6 +15,17 @@ import static com.wojtowicz.shared.constants.AppConst.RESUME_PDF;
  * @date 26.01.20
  */
 
+/**
+ * @class CompareFileMagicNumbers is responsible for final decision, if file format is correct
+ *        If format is incorrect
+ * @exception IncorrectFormatException is thrown
+ *        If format is correct
+ * @boolean true is returned
+ * @firstParam please give your file name (location -> resources/files)
+ * @secondParam please give according hex value of its file (what should be real file extension)
+ *
+ *
+ * */
 public class Main {
 
     public static void main(String[] args) throws IncorrectFormatException, FileNotFoundException {

@@ -9,6 +9,12 @@ package com.wojtowicz.hex_values;
 public enum HexValues {
 
 
+    /**
+     * enum for holding default hex values
+     *
+     * */
+
+
     PDF("25, 50, 44, 46"),
     JPEG("FF, D8, FF, D8"),
     PNG("89, 50, 4E, 47"),
@@ -34,12 +40,18 @@ public enum HexValues {
     }
 
 
+    /**
+     * There are only some values as enums, so looping does not take much time - time complexity O(n)
+     * @param code takes enum value, for example "25, 50, 44, 46"
+     *             if value is correct, match id to enum name, for example PDF
+     * @return enum name (PDF, JPEG, PNG....)
+     * */
+
     public static String getEnumByName(String code) {
         for(HexValues e : HexValues.values()){
-            if(e.hexValue.equals(code)) return e.name();
+            if(e.hexValue.equals(code))
+                return e.name();
         }
         return null;
     }
-
-
 }
