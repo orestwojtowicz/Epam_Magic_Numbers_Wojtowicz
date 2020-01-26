@@ -34,7 +34,17 @@ public class CompareFileMagicNumbers extends ReadHexFromFile implements CheckFil
     }
 
 
-    public String convertHexValueToFileExtension(String hexValue) {
+    public String convertRequestedFileToFileExtension(String filePath) throws FileNotFoundException {
+
+        String hexValueFromFile = readHexValuesFromFile(filePath); // example output [89, 50, 4e, 47]
+        String removedString = hexValueFromFile.substring(1, hexValueFromFile.length()-1); //example output 89, 50, 4e, 47
+        String getEnumName = HexValues.getEnumByName(removedString.toUpperCase());
+
+        return getEnumName;
+    }
+
+
+     String convertHexValueToFileExtension(String hexValue) {
 
         String returnFileExtension = "";
 
@@ -83,7 +93,5 @@ public class CompareFileMagicNumbers extends ReadHexFromFile implements CheckFil
         }
         return defaultHexString.toLowerCase();
     }
-
-
 
 }
