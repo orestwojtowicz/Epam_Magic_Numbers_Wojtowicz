@@ -33,4 +33,13 @@ public enum HexValues {
         return hexValue;
     }
 
+
+    public static String getEnumByName(String code) {
+        for(HexValues e : HexValues.values()){
+            if(e.hexValue.equals(code)) return e.name();
+        }
+        return null;
+    }
+
+
 }

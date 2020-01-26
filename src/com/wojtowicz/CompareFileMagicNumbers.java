@@ -31,12 +31,20 @@ public class CompareFileMagicNumbers extends ReadHexFromFile implements CheckFil
             System.out.println("Your file real extension is ");
 
         }
-
-
     }
 
 
+    public String convertHexValueToFileExtension(String hexValue) {
 
+        String returnFileExtension = "";
+
+        for (HexValues hex : HexValues.values()) {
+            if (hex.getHexValue().equals(hexValue)) {
+                returnFileExtension = hex.toString();
+            }
+        }
+        return HexValues.getEnumByName(returnFileExtension);
+    }
 
 
     private String readHexValuesFromFile(String filePath) throws FileNotFoundException {
@@ -58,7 +66,7 @@ public class CompareFileMagicNumbers extends ReadHexFromFile implements CheckFil
     }
 
 
-    public String readDefaultHexValuesFromEnum(String defaultHexValueFromEnum) {
+    private String readDefaultHexValuesFromEnum(String defaultHexValueFromEnum) {
 
         Map<String, List<String>> defaultHexValues = new HashMap<>();
         List<String> hexDefaultListValues = new ArrayList<>();
