@@ -24,6 +24,14 @@ public class CompareFileMagicNumbers extends ReadHexFromFile implements CheckFil
         boolean compareBothFilesDefaultHexValues =
                 readHexValuesFromFile(hexValue).equals(readDefaultHexValuesFromEnum(defaultHexString));
 
+        if (!compareBothFilesDefaultHexValues) {
+            throw new IncorrrectFormatException(
+                  "wrong file format");
+        } else {
+            System.out.println("Your file real extension is ");
+
+        }
+
 
     }
 
