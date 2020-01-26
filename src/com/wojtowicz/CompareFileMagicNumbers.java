@@ -18,6 +18,16 @@ public class CompareFileMagicNumbers extends ReadHexFromFile {
 
 
 
+    public void checkIfGivenFileExtensionIsCorrect(
+            String hexValue, String defaultHexString) throws IncorrrectFormatException, FileNotFoundException {
+
+        boolean compareBothFilesDefaultHexValues =
+                readHexValuesFromFile(hexValue).equals(readDefaultHexValuesFromEnum(defaultHexString));
+
+        System.out.println(compareBothFilesDefaultHexValues);
+    }
+
+
 
 
 
@@ -36,11 +46,8 @@ public class CompareFileMagicNumbers extends ReadHexFromFile {
             throw new FileNotFoundException(
                     "Please check if file " + filePath + " is correct");
         }
-
         return hexValue.toLowerCase();
     }
-
-
 
 
     public String readDefaultHexValuesFromEnum(String defaultHexValueFromEnum) {
@@ -53,13 +60,11 @@ public class CompareFileMagicNumbers extends ReadHexFromFile {
         if (defaultHexValues == null && hexDefaultListValues == null) {
             throw new NullPointerException("Could not add enum values");
         }
-
         String defaultHexString = "";
 
         for (List<String> value : defaultHexValues.values()) {
             defaultHexString = String.valueOf(value);
         }
-
         return defaultHexString.toLowerCase();
     }
 
