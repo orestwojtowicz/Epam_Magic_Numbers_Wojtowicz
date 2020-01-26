@@ -1,4 +1,4 @@
-package com.wojtowicz;
+package com.wojtowicz.controller.read_hex_values;
 
 import java.io.File;
 import java.io.FileInputStream;

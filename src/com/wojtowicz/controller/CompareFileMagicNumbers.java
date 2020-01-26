@@ -1,4 +1,9 @@
-package com.wojtowicz;
+package com.wojtowicz.controller;
+
+import com.wojtowicz.controller.check_file_extension.CheckFileExtensionValues;
+import com.wojtowicz.hex_values.HexValues;
+import com.wojtowicz.shared.exception.IncorrectFormatException;
+import com.wojtowicz.controller.read_hex_values.ReadHexFromFile;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -13,7 +18,7 @@ import java.util.Map;
  * @date 26.01.20
  */
 
-public class CompareFileMagicNumbers extends ReadHexFromFile implements CheckFileExtensionValues{
+public class CompareFileMagicNumbers extends ReadHexFromFile implements CheckFileExtensionValues {
 
 
 

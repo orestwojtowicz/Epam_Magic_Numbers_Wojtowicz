@@ -1,4 +1,4 @@
-package com.wojtowicz;
+package com.wojtowicz.shared.exception;
 
 /**
  * @author Damian Wójtowicz

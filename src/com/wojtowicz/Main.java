@@ -1,9 +1,13 @@
 package com.wojtowicz;
 
 
+import com.wojtowicz.controller.CompareFileMagicNumbers;
+import com.wojtowicz.hex_values.HexValues;
+import com.wojtowicz.shared.exception.IncorrectFormatException;
+
 import java.io.FileNotFoundException;
 
-import static com.wojtowicz.AppConst.RESUME_PDF;
+import static com.wojtowicz.shared.constants.AppConst.RESUME_PDF;
 
 /**
  * @author Damian Wójtowicz

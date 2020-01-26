@@ -1,4 +1,6 @@
-package com.wojtowicz;
+package com.wojtowicz.controller.check_file_extension;
+
+import com.wojtowicz.shared.exception.IncorrectFormatException;
 
 import java.io.FileNotFoundException;
 

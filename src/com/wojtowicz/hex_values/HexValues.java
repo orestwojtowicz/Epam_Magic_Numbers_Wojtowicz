@@ -1,4 +1,4 @@
-package com.wojtowicz;
+package com.wojtowicz.hex_values;
 
 /**
  * @author Damian Wójtowicz

@@ -1,4 +1,4 @@
-package com.wojtowicz;
+package com.wojtowicz.shared.constants;
 
 /**
  * @author Damian Wójtowicz
