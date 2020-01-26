@@ -6,10 +6,10 @@ package com.wojtowicz;
  * @date 26.01.20
  */
 
-public class IncorrrectFormatException extends Exception {
+public class IncorrectFormatException extends Exception {
 
 
-    public IncorrrectFormatException(String message) {
+    public IncorrectFormatException(String message) {
         super(message);
     }
 

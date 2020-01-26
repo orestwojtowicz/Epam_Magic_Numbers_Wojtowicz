@@ -19,24 +19,25 @@ public class CompareFileMagicNumbers extends ReadHexFromFile implements CheckFil
 
     @Override
     public void checkIfGivenFileExtensionIsCorrect(
-            String hexValue, String defaultHexString) throws IncorrrectFormatException, FileNotFoundException {
+            String hexValue, String defaultHexString) throws IncorrectFormatException, FileNotFoundException {
 
         boolean compareBothFilesDefaultHexValues =
                 readHexValuesFromFile(hexValue).equals(readDefaultHexValuesFromEnum(defaultHexString));
 
         if (!compareBothFilesDefaultHexValues) {
-            throw new IncorrrectFormatException(
-                  "wrong file format");
+            throw new IncorrectFormatException(
+                    "\nFile has format " + convertRequestedFileToFileExtension(hexValue) + "\n" +
+                            "Your requested file format is " + convertHexValueToFileExtension(defaultHexString));
         } else {
-            System.out.println("Your file real extension is ");
-
+            System.out.println("Your file real extension is " +
+                    convertRequestedFileToFileExtension(hexValue));
         }
     }
 
 
-    public String convertRequestedFileToFileExtension(String filePath) throws FileNotFoundException {
+    private String convertRequestedFileToFileExtension(String filePath) throws FileNotFoundException {
 
-        String hexValueFromFile = readHexValuesFromFile(filePath); // example output [89, 50, 4e, 47]
+        String hexValueFromFile = readHexValuesFromFile(filePath); //example output [89, 50, 4e, 47]
         String removedString = hexValueFromFile.substring(1, hexValueFromFile.length()-1); //example output 89, 50, 4e, 47
         String getEnumName = HexValues.getEnumByName(removedString.toUpperCase());
 
@@ -44,7 +45,7 @@ public class CompareFileMagicNumbers extends ReadHexFromFile implements CheckFil
     }
 
 
-     String convertHexValueToFileExtension(String hexValue) {
+    private String convertHexValueToFileExtension(String hexValue) {
 
         String returnFileExtension = "";
 

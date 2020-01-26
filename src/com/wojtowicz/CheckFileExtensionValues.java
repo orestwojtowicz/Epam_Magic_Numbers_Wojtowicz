@@ -12,6 +12,6 @@ public interface CheckFileExtensionValues {
 
 
     default void checkIfGivenFileExtensionIsCorrect(
-            String hexValue, String defaultHexString) throws IncorrrectFormatException, FileNotFoundException {
+            String hexValue, String defaultHexString) throws IncorrectFormatException, FileNotFoundException {
     }
 }
