@@ -6,7 +6,7 @@ package com.wojtowicz;
  * @date 26.01.20
  */
 
-public class IncorrrectFormatExceptio extends Exception {
+public class IncorrrectFormatException extends Exception {
 
 
     public IncorrrectFormatException(String message) {
