@@ -13,18 +13,18 @@ import java.util.Map;
  * @date 26.01.20
  */
 
-public class CompareFileMagicNumbers extends ReadHexFromFile {
+public class CompareFileMagicNumbers extends ReadHexFromFile implements CheckFileExtensionValues{
 
 
 
-
+    @Override
     public void checkIfGivenFileExtensionIsCorrect(
             String hexValue, String defaultHexString) throws IncorrrectFormatException, FileNotFoundException {
 
         boolean compareBothFilesDefaultHexValues =
                 readHexValuesFromFile(hexValue).equals(readDefaultHexValuesFromEnum(defaultHexString));
 
-        System.out.println(compareBothFilesDefaultHexValues);
+
     }
 
 
