@@ -7,6 +7,12 @@ import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * @author Damian Wójtowicz
+ * @project Epam_Magic_Number_Wójtowicz
+ * @date 26.01.20
+ */
+
 public class Main {
 
     public static void main(String[] args) {
