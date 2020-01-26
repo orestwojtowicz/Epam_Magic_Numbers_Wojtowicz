@@ -7,7 +7,7 @@ import com.wojtowicz.shared.exception.IncorrectFormatException;
 
 import java.io.FileNotFoundException;
 
-import static com.wojtowicz.shared.constants.AppConst.RESUME_PDF;
+import static com.wojtowicz.shared.constants.AppConst.*;
 
 /**
  * @author Damian Wójtowicz
@@ -31,18 +31,19 @@ public class Main {
     public static void main(String[] args) throws IncorrectFormatException, FileNotFoundException {
 	// write your code here
 
- // Comparing PDF to PDF
- CompareFileMagicNumbers COMPARE_PDF_TO_PDF = new CompareFileMagicNumbers();
-        COMPARE_PDF_TO_PDF.checkIfGivenFileExtensionIsCorrect(RESUME_PDF, HexValues.PDF.hexValue);
+ // Comparing PDF to PDF - real pdf
+/* CompareFileMagicNumbers COMPARE_PDF_TO_PDF = new CompareFileMagicNumbers();
+        COMPARE_PDF_TO_PDF.checkIfGivenFileExtensionIsCorrect(RESUME_PDF, HexValues.DOC.hexValue);*/
 
 
+    // Comparing PNG file, it is pretending to be GIF, check if it is maybe DOC
+/*       CompareFileMagicNumbers COMPARE_NO_GIF_TO_GIF = new CompareFileMagicNumbers();
+        COMPARE_NO_GIF_TO_GIF.checkIfGivenFileExtensionIsCorrect(NOT_GIF, HexValues.DOC.hexValue);*/
 
 
-    //  Comparing PDF to DOC
-    CompareFileMagicNumbers COMPARE_PDF_TO_DOC = new CompareFileMagicNumbers();
-        COMPARE_PDF_TO_DOC.checkIfGivenFileExtensionIsCorrect(RESUME_PDF, HexValues.DOC.hexValue);
-
-
+    // Comparing real PNG file to GIF file. I take assumption, that this file might be GIF file, but in fact it is PNG
+            CompareFileMagicNumbers COMPARE_PNG_TO_PDF = new CompareFileMagicNumbers();
+            COMPARE_PNG_TO_PDF.checkIfGivenFileExtensionIsCorrect(ANGULAR_PNG, HexValues.GIF.hexValue);
 
 
 
