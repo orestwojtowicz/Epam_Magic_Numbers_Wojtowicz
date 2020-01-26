@@ -1,5 +1,7 @@
 package com.wojtowicz;
 
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -13,6 +15,30 @@ import java.util.Map;
 
 public class CompareFileMagicNumbers extends ReadHexFromFile {
 
+
+
+
+
+
+
+    private String readHexValuesFromFile(String filePath) throws FileNotFoundException {
+
+        File file = new File(filePath);
+        List<String> hexValuesFromFile = new ArrayList<>();
+
+        hexValuesFromFile.add(readHexValues(file).toString());
+        String hexValue = "";
+        if (file.exists() && hexValuesFromFile != null) {
+            for (String hex : hexValuesFromFile) {
+                hexValue = hex;
+            }
+        } else {
+            throw new FileNotFoundException(
+                    "Please check if file " + filePath + " is correct");
+        }
+
+        return hexValue.toLowerCase();
+    }
 
 
 
