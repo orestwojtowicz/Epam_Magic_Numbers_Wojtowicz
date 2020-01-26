@@ -17,34 +17,31 @@ import static com.wojtowicz.shared.constants.AppConst.*;
 
 /**
  * @class CompareFileMagicNumbers is responsible for final decision, if file format is correct
- *        If format is incorrect
+ * If format is incorrect
  * @exception IncorrectFormatException is thrown
- *        If format is correct
+ * If format is correct
  * @boolean true is returned
  * @firstParam please give your file name (location -> resources/files)
  * @secondParam please give according hex value of its file (what should be real file extension)
- *
- *
- * */
+ */
 public class Main {
 
     public static void main(String[] args) throws IncorrectFormatException, FileNotFoundException {
-	// write your code here
+        // write your code here
 
- // Comparing PDF to PDF - real pdf
-/* CompareFileMagicNumbers COMPARE_PDF_TO_PDF = new CompareFileMagicNumbers();
+        // Comparing PDF to PDF - real pdf
+        /* CompareFileMagicNumbers COMPARE_PDF_TO_PDF = new CompareFileMagicNumbers();
         COMPARE_PDF_TO_PDF.checkIfGivenFileExtensionIsCorrect(RESUME_PDF, HexValues.DOC.hexValue);*/
 
 
-    // Comparing PNG file, it is pretending to be GIF, check if it is maybe DOC
-/*       CompareFileMagicNumbers COMPARE_NO_GIF_TO_GIF = new CompareFileMagicNumbers();
+        // Comparing PNG file, it is pretending to be GIF, check if it is maybe DOC
+        /*CompareFileMagicNumbers COMPARE_NO_GIF_TO_GIF = new CompareFileMagicNumbers();
         COMPARE_NO_GIF_TO_GIF.checkIfGivenFileExtensionIsCorrect(NOT_GIF, HexValues.DOC.hexValue);*/
 
 
-    // Comparing real PNG file to GIF file. I take assumption, that this file might be GIF file, but in fact it is PNG
-            CompareFileMagicNumbers COMPARE_PNG_TO_PDF = new CompareFileMagicNumbers();
-            COMPARE_PNG_TO_PDF.checkIfGivenFileExtensionIsCorrect(ANGULAR_PNG, HexValues.GIF.hexValue);
-
+        // Comparing real PNG file to GIF file. I take assumption, that this file might be GIF file, but in fact it is PNG
+        CompareFileMagicNumbers COMPARE_PNG_TO_PDF = new CompareFileMagicNumbers();
+        COMPARE_PNG_TO_PDF.checkIfGivenFileExtensionIsCorrect(ANGULAR_PNG, HexValues.GIF.hexValue);
 
 
     }
