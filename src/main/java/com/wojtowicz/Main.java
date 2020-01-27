@@ -30,18 +30,18 @@ public class Main {
         // write your code here
 
         // Comparing PDF to PDF - real pdf
-        /* CompareFileMagicNumbers COMPARE_PDF_TO_PDF = new CompareFileMagicNumbers();
-        COMPARE_PDF_TO_PDF.checkIfGivenFileExtensionIsCorrect(RESUME_PDF, HexValues.DOC.hexValue);*/
+         CompareFileMagicNumbers COMPARE_PDF_TO_PDF = new CompareFileMagicNumbers();
+        COMPARE_PDF_TO_PDF.checkIfGivenFileExtensionIsCorrect(RESUME_PDF, HexValues.PDF.hexValue);
 
 
         // Comparing PNG file, it is pretending to be GIF, check if it is maybe DOC
-        /*CompareFileMagicNumbers COMPARE_NO_GIF_TO_GIF = new CompareFileMagicNumbers();
+   /*     CompareFileMagicNumbers COMPARE_NO_GIF_TO_GIF = new CompareFileMagicNumbers();
         COMPARE_NO_GIF_TO_GIF.checkIfGivenFileExtensionIsCorrect(NOT_GIF, HexValues.DOC.hexValue);*/
 
 
         // Comparing real PNG file to GIF file. I take assumption, that this file might be GIF file, but in fact it is PNG
-        CompareFileMagicNumbers COMPARE_PNG_TO_PDF = new CompareFileMagicNumbers();
-        COMPARE_PNG_TO_PDF.checkIfGivenFileExtensionIsCorrect(ANGULAR_PNG, HexValues.GIF.hexValue);
+   /*     CompareFileMagicNumbers COMPARE_PNG_TO_PDF = new CompareFileMagicNumbers();
+        COMPARE_PNG_TO_PDF.checkIfGivenFileExtensionIsCorrect(ANGULAR_PNG, HexValues.GIF.hexValue);*/
 
 
     }
